@@ -9,10 +9,10 @@ let url = "mongodb://localhost:27017";
 const bodyParser = require('body-parser');
 app.use(bodyParser.json())
 
-//const jwt = require('jsonwebtoken');
-//const exjwt = require('express-jwt');
-//const _PRIVATE_KEY = 'SamuPaga600DiAssicurazioneSenzaBersaniAhAhAh'
-///app.use(exjwt({ secret: _PRIVATE_KEY}).unless({path: ['/login']}));
+const jwt = require('jsonwebtoken');
+const exjwt = require('express-jwt');
+const _PRIVATE_KEY = 'SamuPaga600DiAssicurazioneSenzaBersaniAhAhAh'
+app.use(exjwt({ secret: _PRIVATE_KEY}).unless({path: ['/login']}));
 
 let visite = 0
 
